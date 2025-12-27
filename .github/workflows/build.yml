@@ -47,7 +47,7 @@ jobs:
         run: |
           find . -name . -o -prune -exec rm -rf -- {} +
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       # Run the case checker action
       - name: Check Case Sensitivity
@@ -122,7 +122,7 @@ jobs:
           ./elan-init -y --default-toolchain none
           echo "$HOME/.elan/bin" >> "${GITHUB_PATH}"
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: If using a lean-pr-release toolchain, uninstall
         run: |
@@ -354,7 +354,7 @@ jobs:
     needs: [style_lint, build]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - id: PR
         uses: 8BitJonny/gh-get-current-pr@3.0.0

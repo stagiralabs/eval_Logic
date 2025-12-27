@@ -95,7 +95,7 @@ jobs:
         run: |
           find . -name . -o -prune -exec rm -rf -- {} +
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         if: steps.user_permission.outputs.require-result == 'true'
         with:
           token: ${{ secrets.BOT_FIX_STYLE_TOKEN }}

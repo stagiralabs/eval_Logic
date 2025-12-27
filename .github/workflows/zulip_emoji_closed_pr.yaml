@@ -40,7 +40,7 @@ jobs:
       - name: checkout zulip_emoji_merge_delegate script
         if: ${{ ! startsWith(github.event.pull_request.title, '[Merged by Bors]') ||
                 github.event_name == 'reopened' }}
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           sparse-checkout: |
             scripts/zulip_emoji_merge_delegate.py

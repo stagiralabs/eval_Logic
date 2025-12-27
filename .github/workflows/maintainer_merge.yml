@@ -64,7 +64,7 @@ jobs:
 
       - name: Checkout
         if: ${{ ! steps.merge_or_delegate.outputs.mOrD == '' }}
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Determine Zulip topic
         if: ${{ ! steps.merge_or_delegate.outputs.mOrD == '' }}
